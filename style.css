@@ -155,9 +155,21 @@
     margin: 50px auto;
     text-align: center;
   }
+  .sponsor-heading h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
   .sponsor-logo{
+    display: grid;
+    grid-template-columns: repeat(5 ,1fr);
     justify-content: center;
-    gap: 155px;
+    max-width: 1440px;
+    height: 100px;
+    
+  }
+  .sponsor-logo img{
+    filter: grayscale(100%);
   }
   
 
@@ -165,8 +177,9 @@
 
   /* responsive medea qwery  */
   @media screen and (max-width:576px) {
-    .navbar , .nav-links , .teams{
+    .navbar , .nav-links , .teams  {
       flex-direction: column;
+      
     }
     .teams{
       flex-direction: column-reverse;
@@ -174,12 +187,12 @@
     .team-feature{
       margin-left: 20px;
     }
-    .team-image-container, .facts-container{
-      grid-template-columns: repeat(1,1fr);
+    .team-image-container, .facts-container , .sponsor-logo{
+      grid-template-columns: repeat(1 , 1fr);
       margin-top: 30px;
 
     }
-    .facts-container{
+    .facts-container , .sponsor-logo{
      justify-items: center;
       gap: 25px;
     }
